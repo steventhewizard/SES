@@ -68,25 +68,74 @@
        margin: 10px 0;
        width: 100%;
      }
+.upload-field {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.upload-field:hover {
+  background-color: #e6e6e6;
+}
+
+.upload-field input[type="file"] {
+  display: none;
+}
+
+.upload-field label {
+  color: #333;
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-right: 10px;
+}
    </style>
  </head>
  <body>
-   <h1>Academic Evaluation System</h1> <!-- The system's header -->
-
-   <!-- Buttons for uploading rubric and essay -->
-   <button id="rubric-upload-button">Upload Rubric</button>
-   <button id="essay-upload-button">Upload Essay</button>
-
-   <!-- Marks container -->
-   <div id="Marks-container">
-     <h2>Marks</h2> <!-- Marks heading -->
-     <!-- Marks content -->
-   </div>
-
-   <!-- Feedback container -->
+   <h1>Academic Evaluation System</h1> 
+   <h2>upload rubric</h2>
+   <form>
+    <form method="post" enctype="multipart/form-data">
+     <label for="pdf_uploads">Choose Rubric to upload (Pdf)</label>
+     <input
+       type="file"
+       id="pdf_uploads"
+       name="pdf_uploads"
+       accept=".pdf "
+       multiple />
+     <div class="preview">
+     </div>
+     <div>
+       <button>Submit</button>
+     </div>
+   </form>
+   <h2>upload essay</h2>
+   <form>
+    <form method="post" enctype="multipart/form-data">
+     <label for="pdf_uploads">Choose Essay to upload (pdf)</label>
+     <input
+       type="file"
+       id="pdf_uploads"
+       name="pdf_uploads"
+       accept=".pdf "
+       multiple />
+     <div class="preview">
+     </div>
+     <div>
+       <button>Submit</button>
+     </div>
+   </form>
+   <div id="marks-container">
+     <h2>Marks</h2> </div>
    <div id="feedback-container">
-     <h2>Feedback</h2> <!-- Feedback heading -->
-     <!-- Feedback content -->
+     <h2>Feedback</h2> 
+   </div>
+   
    </div>
  </body>
 </html>
