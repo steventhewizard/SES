@@ -7,3 +7,4 @@ class rubric (models.Model) :
 
 class Essay(models.Model) :
    pdf_file = models.FileField(upload_to='essays/')
+   

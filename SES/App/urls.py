@@ -5,6 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('', views.Index),
+    path('upload/rubric/', views.upload_rubric, name='upload_rubric'),
+    path('upload/essay/', views.upload_essay, name='upload_essay'),
 ]
 
 
